@@ -7,7 +7,9 @@ Respect for [skanehira/gyazo.vim](https://github.com/skanehira/gyazo.vim).
 
 ## Install
 
-If you already installed [skanehira/gyazo.vim](https://github.com/skanehira/gyazo.vim), this plugin will conflict.
+If you already installed
+[skanehira/gyazo.vim](https://github.com/skanehira/gyazo.vim), this plugin will
+conflict.
 
 ### dein.vim
 

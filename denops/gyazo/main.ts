@@ -4,7 +4,6 @@ import * as vars from "./vendor/https/deno.land/x/denops_std/variable/mod.ts";
 import * as clip from "./vendor/https/deno.land/x/clipboard_image/mod.ts";
 import * as fn from "./vendor/https/deno.land/x/denops_std/function/mod.ts";
 import { readAll } from "./vendor/https/deno.land/std/io/mod.ts";
-import { getToken } from "./token.ts";
 
 export function main(denops: Denops): Promise<void> {
   denops.dispatcher = {
@@ -13,7 +12,12 @@ export function main(denops: Denops): Promise<void> {
       if (await fn.has(denops, "linux") || await fn.has(denops, "unix")) {
         yankReg = "+";
       }
-      const token = await getToken();
+      const token = await vars.g.get(denops, "gyazo#token");
+      if (token == null) {
+        console.error(`Gyazo token is not defined`);
+        return;
+      }
+      ensureString(token);
       const toInsert = !!await vars.g.get(
         denops,
         "gyazo_insert_markdown_url",
@@ -36,7 +40,8 @@ export function main(denops: Denops): Promise<void> {
       const res = await fetch(req);
       const json = await res.json();
       if (json.url == null && json.error != null) {
-        throw Error(json.message);
+        console.error(json.message);
+        return;
       }
       if (toInsert) {
         fn.setline(denops, ".", `![](${json.url})`);

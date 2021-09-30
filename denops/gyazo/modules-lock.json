@@ -16,7 +16,6 @@
   "https://deno.land/std": {
     "version": "@0.109.0",
     "modules": [
-      "/path/mod.ts",
       "/io/mod.ts"
     ]
   },

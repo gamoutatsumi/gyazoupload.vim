@@ -34,8 +34,12 @@ INTERFACE					*dps-gyazo-interface*
 -----------------------------------------------------------------------------
 VARIABLES					*dps-gyazo-variables*
 
-g:gyazo_insert_markdown_url			*g:gyazo_insert_markdown_url*
+g:gyazo#insert_markdown_url			*g:gyazo#insert_markdown_url*
   Upload image and insert markdown link to current line.
+
+
+g:gyazo#token 					*g:gyazo#token*
+  Token of Gyazo Upload API.
 
 -----------------------------------------------------------------------------
 COMMANDS                        		*dps-gyazo-commands*
