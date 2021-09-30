@@ -24,5 +24,11 @@
     "modules": [
       "/mod.ts"
     ]
+  },
+  "https://deno.land/x/yargs_parser": {
+    "version": "@yargs-parser-v20.2.9-deno",
+    "modules": [
+      "/deno.ts"
+    ]
   }
 }

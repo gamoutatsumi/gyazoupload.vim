@@ -44,10 +44,11 @@ g:gyazo#token 					*g:gyazo#token*
 -----------------------------------------------------------------------------
 COMMANDS                        		*dps-gyazo-commands*
 
-:GyazoUpload {file}		                *:GyazoUpload*
+:GyazoUpload [-m] {file}	                *:GyazoUpload*
   Upload image to Gyazo.
   If {file} is specified, that will be upload.
   If not specified, will upload image from clipboard.
+  If [-m] is specified, force paste markdown style link.
 
 KEY-MAPPINGS					*dps-gyazo-key-mappings*
 
