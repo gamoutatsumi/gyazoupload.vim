@@ -8,7 +8,7 @@ function s:upload(...) abort
     sleep 1m
   endwhile
   if a:0 > 0
-    return denops#notify("gyazo", "upload", [a:1])
+    return denops#notify("gyazo", "upload", a:000)
   else
     return denops#notify("gyazo", "upload", [])
   endif
