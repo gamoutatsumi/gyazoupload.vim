@@ -29,8 +29,10 @@ call dein#add('gamoutatsumi/dps-gyazo.vim')
 ```vim
 " upload specified file
 :GyazoUpload [file]
-" uplaod from clipboard
+" upload from clipboard
 :GyazoUpload
+" upload and paste markdown style link
+:GyazoUpload -m
 ```
 
 ## License
