@@ -1,4 +1,4 @@
-# dps-gyazo.vim
+# gyazoupload.vim
 
 Vim/Neovim plugin for Gyazo powered by
 [denops.vim](https://github.com/vim-denops/denops.vim)
@@ -15,7 +15,7 @@ conflict.
 
 ```vim
 call dein#add('vim-denops/denops.vim')
-call dein#add('gamoutatsumi/dps-gyazo.vim')
+call dein#add('gamoutatsumi/gyazoupload.vim')
 ```
 
 ## Requirements

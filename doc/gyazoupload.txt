@@ -1,26 +1,26 @@
-*dps-gyazo.txt*	Deno powered Gyazo plugin for Vim and Neovim
+*gyazoupload.txt*	Deno powered Gyazo plugin for Vim and Neovim
 
 Version: 0.0
 Author: Tatsumi Gamou <tatsumigamou@yahoo.co.jp>
 License: MIT License
 
 =============================================================================
-CONTENTS					*dps-gyazo-contents*
+CONTENTS					*gyazoupload-contents*
 
-INTRODUCTION				|dps-gyazo-introduction|
-INSTALL					|dps-gyazo-install|
-INTERFACE				|dps-gyazo-interface|
-  VARIABLES				|dps-gyazo-variables|
-  KEY-MAPPINGS				|dps-gyazo-key-mappings|
+INTRODUCTION				|gyazoupload-introduction|
+INSTALL					|gyazoupload-install|
+INTERFACE				|gyazoupload-interface|
+  VARIABLES				|gyazoupload-variables|
+  KEY-MAPPINGS				|gyazoupload-key-mappings|
 
-
-=============================================================================
-INTRODUCTION					*dps-gyazo-introduction*
-
-*dps-gyazo.vim* is Gyazo plugin powered by denops.vim.
 
 =============================================================================
-INSTALL						*dps-gyazo-install*
+INTRODUCTION					*gyazoupload-introduction*
+
+*gyazoupload.vim* is Gyazo plugin powered by denops.vim.
+
+=============================================================================
+INSTALL						*gyazoupload-install*
 
 Please install both Deno and "denops.vim".
 
@@ -29,10 +29,10 @@ https://github.com/vim-denops/denops.vim
 
 =============================================================================
 
-INTERFACE					*dps-gyazo-interface*
+INTERFACE					*gyazoupload-interface*
 
 -----------------------------------------------------------------------------
-VARIABLES					*dps-gyazo-variables*
+VARIABLES					*gyazoupload-variables*
 
 g:gyazo#insert_markdown_url			*g:gyazo#insert_markdown_url*
   Upload image and insert markdown link to current line.
@@ -42,7 +42,7 @@ g:gyazo#token 					*g:gyazo#token*
   Token of Gyazo Upload API.
 
 -----------------------------------------------------------------------------
-COMMANDS                        		*dps-gyazo-commands*
+COMMANDS                        		*gyazoupload-commands*
 
 :GyazoUpload [-m] {file}	                *:GyazoUpload*
   Upload image to Gyazo.
@@ -50,7 +50,7 @@ COMMANDS                        		*dps-gyazo-commands*
   If not specified, will upload image from clipboard.
   If [-m] is specified, force paste markdown style link.
 
-KEY-MAPPINGS					*dps-gyazo-key-mappings*
+KEY-MAPPINGS					*gyazoupload-key-mappings*
 
 <Plug>(gyazo-upload)
   Uplaod image to GYazo.
