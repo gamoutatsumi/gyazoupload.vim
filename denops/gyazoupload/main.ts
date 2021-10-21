@@ -1,10 +1,5 @@
-import { Denops } from "./vendor/https/deno.land/x/denops_std/mod.ts";
-import { ensureString } from "./vendor/https/deno.land/x/unknownutil/mod.ts";
-import * as vars from "./vendor/https/deno.land/x/denops_std/variable/mod.ts";
-import * as clip from "./vendor/https/deno.land/x/clipboard_image/mod.ts";
-import * as fn from "./vendor/https/deno.land/x/denops_std/function/mod.ts";
-import { readAll } from "./vendor/https/deno.land/std/io/mod.ts";
-import argsParser from "./vendor/https/deno.land/x/yargs_parser/deno.ts";
+import { clip, Denops, ensureString, fn, readAll, vars } from "./deps.ts";
+import argsParser from "https://deno.land/x/yargs_parser@yargs-parser-v20.2.9-deno/deno.ts";
 
 const argsParseOption = {
   boolean: ["m"],
