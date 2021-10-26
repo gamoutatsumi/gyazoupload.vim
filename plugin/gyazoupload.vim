@@ -18,4 +18,4 @@ command! -nargs=* -complete=file GyazoUpload call s:upload(<f-args>)
 
 nnoremap <silent> <Plug>(gyazo-upload) :GyazoUpload<CR>
 
-autocmd User DenopsPluginPost:gyazo let g:gyazoupload#init = v:true
+autocmd User DenopsPluginPost:gyazoupload let g:gyazoupload#init = v:true
