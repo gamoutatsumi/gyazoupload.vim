@@ -8,6 +8,8 @@ const argsParseOption = {
 export function main(denops: Denops): Promise<void> {
   denops.dispatcher = {
     async upload(...args): Promise<void> {
+      const homePath = await fn.expand(denops, "~") as string;
+
       let filePath;
       const parsedArgs = argsParser(args, argsParseOption);
 
@@ -32,7 +34,7 @@ export function main(denops: Denops): Promise<void> {
         );
 
       if (parsedArgs._.length > 0) {
-        filePath = parsedArgs._.join("");
+        filePath = parsedArgs._.join("").replace(/^~/, homePath);
       }
 
       const image = await readAll(
