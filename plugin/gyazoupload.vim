@@ -4,9 +4,7 @@ endif
 let g:loaded_gyazo = v:true
 
 function s:upload(...) abort
-  while !get(g:, 'gyazoupload#init', v:false)
-    sleep 1m
-  endwhile
+  call denops#plugin#wait('gyazoupload')
   if a:0 > 0
     return denops#notify("gyazoupload", "upload", a:000)
   else
