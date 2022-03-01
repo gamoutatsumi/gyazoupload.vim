@@ -1,4 +1,4 @@
-import { clip, Denops, ensureString, fn, readAll, vars } from "./deps.ts";
+import { assertString, clip, Denops, fn, readAll, vars } from "./deps.ts";
 import argsParser from "https://deno.land/x/yargs_parser@yargs-parser-v20.2.9-deno/deno.ts";
 
 const argsParseOption = {
@@ -23,7 +23,7 @@ export function main(denops: Denops): Promise<void> {
         console.error(`Gyazo token is not defined`);
         return;
       }
-      ensureString(token);
+      assertString(token);
 
       const toInsert = (typeof parsedArgs.m === "boolean")
         ? parsedArgs.m
