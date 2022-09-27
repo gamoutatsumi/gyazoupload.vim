@@ -1,4 +1,4 @@
-import { assertString, clip, Denops, fn, readAll, vars } from "./deps.ts";
+import { assertString, Denops, fn, readAll, vars, clippy } from "./deps.ts";
 import argsParser from "https://deno.land/x/yargs_parser@yargs-parser-v20.2.9-deno/deno.ts";
 
 const argsParseOption = {
@@ -38,7 +38,7 @@ export function main(denops: Denops): Promise<void> {
       }
 
       const image = await readAll(
-        (filePath == undefined) ? await clip.read() : await Deno.open(filePath),
+        (filePath == undefined) ? await clippy.read_image() : await Deno.open(filePath),
       );
       const imageBlob = new Blob([image]);
 
