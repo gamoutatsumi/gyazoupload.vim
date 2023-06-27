@@ -1,4 +1,4 @@
-import { assertString, Denops, fn, readAll, vars, clippy } from "./deps.ts";
+import { assert, clippy, Denops, fn, is, readAll, vars } from "./deps.ts";
 import argsParser from "https://deno.land/x/yargs_parser@yargs-parser-v20.2.9-deno/deno.ts";
 
 const argsParseOption = {
@@ -23,7 +23,7 @@ export function main(denops: Denops): Promise<void> {
         console.error(`Gyazo token is not defined`);
         return;
       }
-      assertString(token);
+      assert(token, is.String);
 
       const toInsert = (typeof parsedArgs.m === "boolean")
         ? parsedArgs.m
@@ -38,7 +38,9 @@ export function main(denops: Denops): Promise<void> {
       }
 
       const image = await readAll(
-        (filePath == undefined) ? await clippy.read_image() : await Deno.open(filePath),
+        (filePath == undefined)
+          ? await clippy.read_image()
+          : await Deno.open(filePath),
       );
       const imageBlob = new Blob([image]);
 
